@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-size: 0.32rem;
+}
+
+body,
+html,
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  height: 1rem;
+  background: #d04233;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header img {
+  width: 0.5rem;
+  height: 0.56rem;
+  padding: 0.2rem;
+}
+
+header input {
+  flex: 1;
+  height: 0.6rem;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+main .all {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+main .scroll {
+  width: 100%;
+  height: auto;
+}
+
+.top {
+  width: 100%;
+  height: 1rem;
+  background: #f8f8f9;
+  display: flex;
+}
+
+.top p {
+  flex: 1;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.top .change {
+  color: #d04233;
+  border-bottom: solid 2px #d04233;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  margin-top: 2px;
+  position: relative;
+}
+
+.banner ul {
+  width: 100%;
+  height: auto;
+}
+
+.banner ul li {
+  width: 100%;
+  height: auto;
+}
+
+.banner ul li img {
+  width: 100%;
+  height: auto;
+}
+
+.banner p {
+  text-align: center;
+}
+
+.tuijian {
+  width: 100%;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.tuijian dl {
+  flex: 1;
+}
+
+.tuijian dl dt {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.tuijian dl dt img {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.tuijian dl dd {
+  text-align: center;
+  font-size: 0.28rem;
+}
+
+.gedan {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gedan h2 {
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-indent: 0.2rem;
+  flex-shrink: 0;
+}
+
+.gedan dl {
+  width: 32%;
+  height: auto;
+}
+
+.gedan dl dt {
+  width: 100%;
+  height: auto;
+}
+
+.gedan dl dt img {
+  width: 100%;
+  height: auto;
+}
+
+.gedan dl dd {
+  font-size: 0.28rem;
+}
+
+footer {
+  width: 100%;
+  height: 1.3rem;
+  background: #343433;
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+  flex: 1;
+  color: white;
+  text-align: center;
+  font-size: 0.28rem;
+}
+
+footer p img {
+  display: block;
+  margin: 0 auto;
+  width: 0.5rem;
+  height: auto;
+}
+
+footer .active {
+  color: red;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equir='X-UA-compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no'>
+    <title>Document</title>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + "px";
+    </script>
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <img src="images/head_03.jpg" alt="">
+            <input type="text" placeholder="给你推荐 病变">
+            <img src="images/head_05.jpg" alt="">
+        </header>
+        <main class="main swiper-container">
+            <div class="all swiper-wrapper">
+                <div class="scroll swiper-slide">
+                    <div class="top">
+                        <p class="change">音乐</p>
+                        <p>视频</p>
+                        <p>电台</p>
+                    </div>
+                    <div class="banner swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><img src="images/1.jpg" alt=""></li>
+                            <li class="swiper-slide"><img src="images/2.jpg" alt=""></li>
+                            <li class="swiper-slide"><img src="images/3.jpg" alt=""></li>
+                            <li class="swiper-slide"><img src="images/4.jpg" alt=""></li>
+                            <li class="swiper-slide"><img src="images/5.jpg" alt=""></li>
+                        </ul>
+                        <p class="page"></p>
+                    </div>
+                    <div class="tuijian">
+                        <dl>
+                            <dt><img src="images/tuijian_10.jpg" alt=""></dt>
+                            <dd>私人FM</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/tuijian_12.jpg" alt=""></dt>
+                            <dd>私人FM</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/tuijian_14.jpg" alt=""></dt>
+                            <dd>私人FM</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/tuijian_16.jpg" alt=""></dt>
+                            <dd>私人FM</dd>
+                        </dl>
+                    </div>
+                    <div class="gedan">
+                        <h2>推荐歌单 ></h2>
+                        <dl>
+                            <dt><img src="images/gedan_02.jpg" alt=""></dt>
+                            <dd>案件发生呢卡就开始没打开碍事</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/gedan_03.jpg" alt=""></dt>
+                            <dd>案件发生呢卡就开始没打开碍事</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/gedan_05.jpg" alt=""></dt>
+                            <dd>案件发生呢卡就开始没打开碍事</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/gedan_02.jpg" alt=""></dt>
+                            <dd>案件发生呢卡就开始没打开碍事</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/gedan_03.jpg" alt=""></dt>
+                            <dd>案件发生呢卡就开始没打开碍事</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/gedan_05.jpg" alt=""></dt>
+                            <dd>案件发生呢卡就开始没打开碍事</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="swiper-slide">2</div>
+                <div class="swiper-slide">3</div>
+                <div class="swiper-slide">4</div>
+            </div>
+        </main>
+        <footer>
+            <p class="active"><img src="images/foot_03.jpg" alt="">发现音乐</p>
+            <p><img src="images/foot_05.jpg" alt="">我的音乐</p>
+            <p><img src="images/foot_07.jpg" alt="">朋友</p>
+            <p><img src="images/foot_09.jpg" alt="">账号</p>
+        </footer>
+    </div>
+    <script src="js/zepto.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script>
+        new Swiper(".banner", {
+            autoplay: 1000,
+            pagination: ".page",
+            paginationClickable: true
+        });
+        var myswiper = new Swiper(".main", {
+            //autoplay: 1000,
+            onSlideChangeStart: function(swiper) {
+                $("footer p").eq(swiper.activeIndex).addClass("active").siblings().removeClass("active");
+            }
+        })
+        $("footer p").on("click", function() {
+            $(this).addClass("active").siblings().removeClass("active");
+            myswiper.slideTo($(this).index())
+        })
+    </script>
+</body>
+
+</html>
